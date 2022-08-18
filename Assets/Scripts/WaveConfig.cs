@@ -6,9 +6,14 @@ using UnityEngine;
 public class WaveConfig : ScriptableObject
 {
     [SerializeField] Transform pathPrefab;
-    [SerializeField] float enemiesMoveSpeed = 5f;
+    [SerializeField] float moveSpeed = 5f;
 
-    public float EnemiesMoveSpeed { get => enemiesMoveSpeed; set => enemiesMoveSpeed = value; }
+    public float MoveSpeed { get => moveSpeed; set => moveSpeed = value; }
+
+    public float GetMoveSpeed()
+    {
+        return moveSpeed;
+    }
     
     public Transform GetStartingWayPoint()
     {
@@ -25,8 +30,5 @@ public class WaveConfig : ScriptableObject
         return waypoints;
     }
 
-    public float GetEnemiesMoveSpeed()
-    {
-        return enemiesMoveSpeed;
-    }
+
 }
