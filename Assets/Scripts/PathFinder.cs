@@ -5,11 +5,18 @@ using UnityEngine;
 
 public class PathFinder : MonoBehaviour
 {
-    [SerializeField] WaveConfig waveConfig;
+    EnemySpawn enemySpawn;
+    WaveConfig waveConfig;
     List<Transform> waypoints;
     int waypointIndex = 0;
+
+    void Awake() 
+    {
+        enemySpawn = FindObjectOfType<EnemySpawn>();
+    }
     void Start()
     {
+        waveConfig = enemySpawn.GetCurrentWave();
         waypoints = waveConfig.GetWayPoints(); // lấy các điểm waypoint
         transform.position = waypoints[waypointIndex].position; // cho vị trí của Dassault == vị trí đầu tiên waypoints(list)
     }
@@ -24,7 +31,7 @@ public class PathFinder : MonoBehaviour
         if (waypointIndex < waypoints.Count)
         {
             Vector3 targetPosition = waypoints[waypointIndex].position;
-            float deltaSpeed = waveConfig.GetMoveSpeed() * Time.deltaTime;
+            float deltaSpeed = waveConfig.MoveSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, deltaSpeed);
             if (transform.position == targetPosition)
             {

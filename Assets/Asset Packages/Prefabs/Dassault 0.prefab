@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 2030795513980595520}
   - component: {fileID: 5352857186160136269}
   m_Layer: 0
-  m_Name: Dassault
+  m_Name: Dassault 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
