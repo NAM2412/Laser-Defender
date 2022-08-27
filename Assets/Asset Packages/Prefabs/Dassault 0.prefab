@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7053988129124176517}
   - component: {fileID: 7180722605376361060}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dassault
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: d7a0bbcf2c6a7ec409077677a32edd06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5200992873185656715}
   - component: {fileID: 1717364670644667522}
   - component: {fileID: 663178978388292445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dassault 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

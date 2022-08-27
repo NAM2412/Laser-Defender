@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5297595249794553323}
   - component: {fileID: 8550897105197220376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DX1700
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4163bdb9fa9bb7b418368a6ff00e3623, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 9122786985790192982}
   - component: {fileID: 6732460940117407649}
   - component: {fileID: -3146936344638211152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DX1700
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,3 +269,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e0046d5befe4a348a3fe7cd122d7c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 50
