@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 9122786985790192982}
   - component: {fileID: 6732460940117407649}
   - component: {fileID: -3146936344638211152}
+  - component: {fileID: 2849589095708353699}
   m_Layer: 6
   m_Name: DX1700
   m_TagString: Untagged
@@ -270,3 +271,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 50
+--- !u!114 &2849589095708353699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7098766771546730435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82428aada3dae534ea757e46ec8ca9bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5063855888722671883, guid: 88a285903c8cf49408509286aadf29af, type: 3}
+  projectileSpeed: 10
+  projectileLifetime: 5
+  firingRate: 0.5
+  isFiring: 0
