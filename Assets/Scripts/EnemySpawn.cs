@@ -19,6 +19,7 @@ public class EnemySpawn : MonoBehaviour
     {
         return currentWave;
     }
+
     private IEnumerator SpawnEnemiesWaves()
     {
         do
@@ -30,7 +31,7 @@ public class EnemySpawn : MonoBehaviour
                 {
                     Instantiate(currentWave.GetEnemyPrefab(i),
                                 currentWave.GetStartingWayPoint().position,
-                                Quaternion.identity, transform);
+                                Quaternion.Euler(0,0,180), transform);
                     yield return new WaitForSeconds(currentWave.GetRandomSpawnTime());
                 }
             }
