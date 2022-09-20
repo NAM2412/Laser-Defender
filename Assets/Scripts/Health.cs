@@ -9,9 +9,11 @@ public class Health : MonoBehaviour
     [SerializeField] ParticleSystem hitEffect;
     [SerializeField] bool applyCameraShake;
     CameraShake cameraShake;
+    AudioPlayer audioPlayer;
 
     void Awake() 
     {
+        audioPlayer = FindObjectOfType<AudioPlayer>();
         cameraShake = Camera.main.GetComponent<CameraShake>();
     }
 
@@ -23,6 +25,7 @@ public class Health : MonoBehaviour
             TakingDamage(damageDealer.Damage);
             PlayHitEffect();
             ShakeCamera();
+            audioPlayer.PlayDamgeClip();
             damageDealer.Hit();
 
         }
