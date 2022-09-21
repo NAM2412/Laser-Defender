@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,26 @@ public class AudioPlayer : MonoBehaviour
     [Header("Damaging")]
     [SerializeField] AudioClip damageClip;
     [SerializeField] [Range(0f,1f)]float damageVolume = 1f;
+    static AudioPlayer instance;
 
+    void Awake() 
+    {
+        ManageSingleton();
+    }
+
+    private void ManageSingleton()
+    {  
+        if (instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;   
+            DontDestroyOnLoad(gameObject);
+        }
+    }
 
     private void PLayClip(AudioClip clip, float clipVolume) 
     {
